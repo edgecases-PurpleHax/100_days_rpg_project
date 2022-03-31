@@ -1,3 +1,6 @@
+import json
+
+
 class Character:
     def __init__(self, name, strength, health):
         self.name = name
@@ -28,7 +31,7 @@ class Character:
         if not self.alive:
             return f"{self.name} has died"
         else:
-            pass
+            return True
 
 
 class Player(Character):
@@ -39,14 +42,41 @@ class Player(Character):
         self.charisma = charisma
 
     def study(self, intelligence_gain):
-        if self.intelligence + intelligence_gain >=100:
+        if self.intelligence + intelligence_gain >= 100:
             self.intelligence = 100
         else:
             self.intelligence = self.intelligence + intelligence_gain
 
     def display_character_stats(self):
         main_stats = self.show_stats()
-        additional_stats = main_stats+f'\r\nIntelligence: {self.intelligence}\r\n' \
-                                      f'Stealth: {self.stealth}\r\n' \
-                                      f'Charisma: {self.charisma}'
+        additional_stats = main_stats + f'\r\nIntelligence: {self.intelligence}\r\n' \
+                                        f'Stealth: {self.stealth}\r\n' \
+                                        f'Charisma: {self.charisma}'
         return additional_stats
+
+
+class Npc(Character):
+    def __init__(self, name):
+        super().__init__(name=name, strength=0, health=100)
+
+    def speech(self, npctype, selection):
+        with open('dialog.json', 'r') as f:
+            dialoge = json.load(f)
+        return dialoge[npctype][selection]
+
+
+class Armorer(Npc):
+    def __init__(self, name):
+        super().__init__(name=name)
+        self.menu = []
+
+
+class SpellSeller(Npc):
+    def __init__(self, name):
+        super().__init__(name=name)
+        self.menu = []
+
+
+class Librarian(Npc):
+    def __init__(self, name):
+        super().__init__(name=name)
