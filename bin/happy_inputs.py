@@ -1,6 +1,5 @@
-import pytest
-from characters.characters import *
-from factories.factories import NameFactory
+from bin.game_packages.states import *
+from bin.game_packages.factories import *
 
 
 def test_character_stats():
@@ -83,3 +82,37 @@ def test_factory_NameFactory():
     assert type(name.name) == str
     assert type(name2.name) == str
     assert type(name3.name) == str
+
+
+def test_game_creation():
+    game = Game()
+    assert game.player.name
+    assert game.armorer
+    assert game.librarian
+    assert game.spellseller
+    assert game.missionnpc1
+    assert game.missionnpc2
+    assert game.missionnpc3
+    assert game.missionnpc4
+    assert game.missionnpc5
+
+
+def test_save_and_load():
+    game_to_save = Game()
+    game_to_save.player.name = 'Test'
+    game_to_save.save_game()
+    game_to_load = game_to_save.load_game()
+    assert game_to_load.player.name == game_to_save.player.name
+    assert game_to_load.player.health == game_to_save.player.health
+    assert game_to_load.player.strength == game_to_save.player.strength
+    assert game_to_load.player.stealth == game_to_save.player.stealth
+    assert game_to_load.player.intelligence == game_to_save.player.intelligence
+    assert game_to_load.player.charisma == game_to_save.player.charisma
+    assert game_to_load.armorer.name == game_to_save.armorer.name
+    assert game_to_load.librarian.name == game_to_save.librarian.name
+    assert game_to_load.spellseller.name == game_to_save.spellseller.name
+    assert game_to_load.missionnpc1.name == game_to_save.missionnpc1.name
+    assert game_to_load.missionnpc2.name == game_to_save.missionnpc2.name
+    assert game_to_load.missionnpc3.name == game_to_save.missionnpc3.name
+    assert game_to_load.missionnpc4.name == game_to_save.missionnpc4.name
+    assert game_to_load.missionnpc5.name == game_to_save.missionnpc5.name

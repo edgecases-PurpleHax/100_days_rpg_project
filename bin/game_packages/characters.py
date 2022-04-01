@@ -1,4 +1,5 @@
 import json
+import random
 
 
 class Character:
@@ -80,3 +81,11 @@ class SpellSeller(Npc):
 class Librarian(Npc):
     def __init__(self, name):
         super().__init__(name=name)
+
+
+class MissionNpc(Npc):
+    def __init__(self, name, mission_number):
+        super().__init__(name=name)
+        with open('missions.json', 'r') as f:
+            self.mission_list = json.load(f)
+        self.mission = self.mission_list[mission_number]
