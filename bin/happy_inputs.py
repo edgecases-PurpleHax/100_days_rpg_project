@@ -28,7 +28,7 @@ def test_char_outputs():
 
 
 def test_char_input():
-    name = input("What is your name")
+    name = input("What is your name? \r\n")
     test_char = Character(name=name, strength=100, health=100)
     print(test_char.name)
     assert test_char.name == name
@@ -66,7 +66,7 @@ def test_player_output():
 
 
 def test_player_input():
-    name = input("What is your name")
+    name = input("What is your name? \r\n")
     test_player = Player(name=name, strength=100, intelligence=100, health=100, charisma=100, stealth=100)
     print(test_player.name)
     assert test_player.name == name
@@ -99,7 +99,7 @@ def test_game_creation():
 
 def test_save_and_load():
     game_to_save = Game()
-    game_to_save.player.name = 'Test'
+    print(f"Use {game_to_save.player.name}_save for test file to open")
     game_to_save.save_game()
     game_to_load = game_to_save.load_game()
     assert game_to_load.player.name == game_to_save.player.name
@@ -116,3 +116,6 @@ def test_save_and_load():
     assert game_to_load.missionnpc3.name == game_to_save.missionnpc3.name
     assert game_to_load.missionnpc4.name == game_to_save.missionnpc4.name
     assert game_to_load.missionnpc5.name == game_to_save.missionnpc5.name
+
+def test_break_me():
+    assert True == True

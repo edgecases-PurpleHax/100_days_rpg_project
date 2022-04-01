@@ -5,7 +5,7 @@ from .factories import *
 
 class Game:
     def __init__(self):
-        self.player = Player(name=input("What is your name? "), strength=100, intelligence=100, stealth=100,
+        self.player = Player(name=input("What is your name? \r\n"), strength=100, intelligence=100, stealth=100,
                              charisma=100, health=100)
         self.armorer = Armorer(name=NameFactory('any').name)
         self.spellseller = SpellSeller(name=NameFactory('any').name)
@@ -20,4 +20,4 @@ class Game:
         pickle.dump(self, open(f'{self.player.name}_save', 'wb'))
 
     def load_game(self):
-        return pickle.load(open('Test_save', "rb"))
+        return pickle.load(open(f'{input("Enter Save file to load: ")}', "rb"))
