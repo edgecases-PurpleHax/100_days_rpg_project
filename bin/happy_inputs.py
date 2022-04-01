@@ -72,7 +72,7 @@ def test_player_input():
     assert test_player.name == name
 
 
-def test_factory_NameFactory():
+def test_factory_name_factory():
     name = NameFactory('male')
     name2 = NameFactory('female')
     name3 = NameFactory('any')
@@ -116,6 +116,7 @@ def test_save_and_load():
     assert game_to_load.missionnpc3.name == game_to_save.missionnpc3.name
     assert game_to_load.missionnpc4.name == game_to_save.missionnpc4.name
     assert game_to_load.missionnpc5.name == game_to_save.missionnpc5.name
+
 
 def test_break_me():
     assert True == True
