@@ -1,6 +1,47 @@
 {
-  "1": {"Name": "Mission 1", "NumberofEnemies": 5, "NumberofActions": 3, "BossType": "Dragon", "StoryLine": {"Action1": "This is the first action"}},
-  "2":  "Fine, mission 2.",
-  "3":  "Fine, mission 3",
-  "4": "Mission 4",
-  "5": "Mission 5"}
+  "1": {
+    "Name": "Mission 1",
+    "NumberofEnemies": 5,
+    "NumberofActions": 3,
+    "BossType": "Dragon",
+    "StoryLine": {
+      "Action1": "This is the first action"
+    }
+  },
+  "2": {
+    "Name": "Mission 2",
+    "NumberofEnemies": 5,
+    "NumberofActions": 3,
+    "BossType": "",
+    "StoryLine": {
+      "Action1": "This is the first action"
+    }
+  },
+  "3": {
+    "Name": "Mission 3",
+    "NumberofEnemies": 5,
+    "NumberofActions": 3,
+    "BossType": "",
+    "StoryLine": {
+      "Action1": "This is the first action"
+    }
+  },
+  "4": {
+    "Name": "Mission 4",
+    "NumberofEnemies": 5,
+    "NumberofActions": 3,
+    "BossType": "",
+    "StoryLine": {
+      "Action1": "This is the first action"
+    }
+  },
+  "5": {
+    "Name": "Mission 5",
+    "NumberofEnemies": 5,
+    "NumberofActions": 3,
+    "BossType": "",
+    "StoryLine": {
+      "Action1": "This is the first action"
+    }
+  }
+}
