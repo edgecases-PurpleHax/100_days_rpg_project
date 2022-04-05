@@ -1,6 +1,6 @@
 {
   "1": {"Name": "Mission 1", "NumberofEnemies": 5, "NumberofActions": 3, "BossType": "Dragon", "StoryLine": {"Action1": "This is the first action"}},
   "2":  "Fine, mission 2.",
-  "3":  "Mission 3",
+  "3":  "This is an automation test",
   "4": "Mission 4",
   "5": "Mission 5"}
