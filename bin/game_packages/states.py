@@ -1,5 +1,5 @@
 import pickle
-from .characters import  *
+from .characters import *
 from .factories import *
 
 
@@ -21,3 +21,8 @@ class Game:
 
     def load_game(self):
         return pickle.load(open(f'{input("Enter Save file to load: ")}', "rb"))
+
+    def startMission(self, missionNumber):
+        with open('missions.json') as f:
+            missions = json.load(f)
+            return missions[missionNumber]

@@ -2,3 +2,10 @@
 # 100 Days of Code Challenge
 
 
+from game_packages.states import Game
+
+
+test = Game()
+mission_list = test.startMission("1")
+
+
