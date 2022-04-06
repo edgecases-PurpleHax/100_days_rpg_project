@@ -55,6 +55,18 @@ class Player(Character):
                                         f'Charisma: {self.charisma}'
         return additional_stats
 
+    def intelligence_attack(self):
+        return self.strength * (self.intelligence / 100)
+
+    def avoid_attack(self):
+        return self.strength * (self.charisma / 100)
+
+    def stealth_attack(self):
+        return self.strength * (self.stealth / 100)
+
+    def regular_attack(self, modifier):
+        return self.strength
+
 
 class Npc(Character):
     def __init__(self, name):
@@ -81,6 +93,7 @@ class SpellSeller(Npc):
 class Librarian(Npc):
     def __init__(self, name):
         super().__init__(name=name)
+        self.menu = []
 
 
 class MissionNpc(Npc):
@@ -89,3 +102,38 @@ class MissionNpc(Npc):
         with open('missions.json', 'r') as f:
             self.mission_list = json.load(f)
         self.mission = self.mission_list[mission_number]
+
+
+class Enemy(Character):
+    def __init__(self, name, strength, level):
+        super().__init__(name=name, strength=strength, health=100)
+        self.level = level
+
+    def attack(self, level):
+        return self.strength * (self.level / 100)
+
+
+class EnemyType1(Enemy):
+    def __init__(self, name, strength, level):
+        super().__init__(name=name, strength=strength, level=level)
+        self.level = level
+
+
+class EnemyType2(Enemy):
+    def __init__(self, name, strength, level):
+        super().__init__(name=name, strength=strength, level=level)
+
+
+class EnemyType3(Enemy):
+    def __init__(self, name, strength, level):
+        super().__init__(name=name, strength=strength, level=level)
+
+
+class EnemyType4(Enemy):
+    def __init__(self, name, strength, level):
+        super().__init__(name=name, strength=strength, level=level)
+
+
+class EnemyType5(Enemy):
+    def __init__(self, name, strength, level):
+        super().__init__(name=name, strength=strength, level=level)
