@@ -1,5 +1,5 @@
 # Story Concept for the game
-
+_____________________________________
 # Enemy Types and concepts
 ## For v1
 * 3 Types
@@ -13,7 +13,7 @@
   * Basic attack
 * Defense
   * This will be a rng that decides if defense was successful or not
-
+______________________________________________________________________
 # Player concept
 ## For v1
 * 1-3 Choices for major type
@@ -34,6 +34,7 @@
   * Something related to stealth
   * Something related to strength
   * Something related to special
+__________________________________
 # Era concept
 * Possibilities (WIP)
   * Futuristic?
@@ -45,6 +46,7 @@
   * Potions: Medieval
   * Syringes, shots, etc Futuristic
   * Mix of both for time jumping
+__________________________________
 # Gameplay concept
 ## Missions
 1. Each mission will have the following attributes:
@@ -88,3 +90,4 @@
          2. Player picks item(s) to buy
          3. Player buys items
       4. Player leaves store
+__________________________________
