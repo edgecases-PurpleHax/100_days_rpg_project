@@ -3,7 +3,7 @@ _____________________________________
 # Enemy Types and concepts
 ## For v1
 * 3 Types
-  * Will be "era" dependent
+  * Will be multiverse dependent
 * Attributes
   * Strength
   * Health
@@ -52,7 +52,7 @@ ______________________________________________________________________
   * Strength
   * Intelligence
   * Stealth
-  * Special (Like spells, or something depending on overall game type)
+  * Special
 * Take damage
 * Attacks
   * Something related to intelligence
