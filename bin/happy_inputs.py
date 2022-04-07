@@ -35,17 +35,19 @@ def test_char_input():
 
 
 def test_player_stats():
-    test_player = Player(name='Test Player', strength=100, intelligence=100, health=100, charisma=100, stealth=100)
+    test_player = Player(name='Test Player', major_type="Soldier", minor_type="Charismatic")
     assert test_player.alive == True
     assert test_player.health == 100
-    assert test_player.intelligence == 100
-    assert test_player.stealth == 100
-    assert test_player.strength == 100
-    assert test_player.charisma == 100
+    assert test_player.intelligence == 30
+    assert test_player.stealth == 30
+    assert test_player.strength == 50
+    assert test_player.charisma == 50
+    assert test_player.endurance == 30
+    assert test_player.agility == 30
 
 
 def test_player_functions():
-    test_player = Player(name='Test Player', strength=100, intelligence=100, health=100, charisma=100, stealth=100)
+    test_player = Player(name='Test Player', major_type="Soldier", minor_type="Charismatic")
     assert test_player.check_alive() == True
     test_player.take_damage(10)
     assert test_player.health == 90
@@ -56,7 +58,7 @@ def test_player_functions():
 
 
 def test_player_output():
-    test_player = Player(name='Test Player', strength=100, intelligence=100, health=100, charisma=100, stealth=100)
+    test_player = Player(name='Test Player', major_type="Soldier", minor_type="Charismatic")
     assert test_player.show_stats() == f"Name: {test_player.name}\r\nStrength: {test_player.strength}\r\nHealth: {test_player.health}"
     assert test_player.display_character_stats() == f"Name: {test_player.name}\r\nStrength: {test_player.strength}\r\n" \
                                                     f"Health: {test_player.health}\r\n" \
@@ -67,7 +69,7 @@ def test_player_output():
 
 def test_player_input():
     name = input("What is your name? \r\n")
-    test_player = Player(name=name, strength=100, intelligence=100, health=100, charisma=100, stealth=100)
+    test_player = Player(name=name, major_type="Soldier", minor_type="Charismatic")
     print(test_player.name)
     assert test_player.name == name
 
@@ -118,5 +120,91 @@ def test_save_and_load():
     assert game_to_load.missionnpc5.name == game_to_save.missionnpc5.name
 
 
-def test_break_me():
-    assert True == True
+def test_player_soldier_charismatic():
+    test = Player(name=NameFactory('any'), major_type="Soldier", minor_type="Charismatic")
+    assert test.strength == 50
+    assert test.stealth == 30
+    assert test.intelligence == 30
+    assert test.charisma == 50
+    assert test.agility == 30
+    assert test.endurance == 30
+
+
+def test_player_soldier_agile():
+    test = Player(name=NameFactory('any'), major_type="Soldier", minor_type="Agile")
+    assert test.strength == 50
+    assert test.stealth == 30
+    assert test.intelligence == 30
+    assert test.charisma == 30
+    assert test.agility == 50
+    assert test.endurance == 30
+
+
+def test_player_soldier_endurance():
+    test = Player(name=NameFactory('any'), major_type="Soldier", minor_type="Endurance")
+    assert test.strength == 50
+    assert test.stealth == 30
+    assert test.intelligence == 30
+    assert test.charisma == 30
+    assert test.agility == 30
+    assert test.endurance == 50
+
+
+def test_player_traveller_charismatic():
+    test = Player(name=NameFactory('any'), major_type="Traveller", minor_type="Charismatic")
+    assert test.strength == 30
+    assert test.stealth == 30
+    assert test.intelligence == 50
+    assert test.charisma == 50
+    assert test.agility == 30
+    assert test.endurance == 30
+
+
+def test_player_traveller_agile():
+    test = Player(name=NameFactory('any'), major_type="Traveller", minor_type="Agile")
+    assert test.strength == 30
+    assert test.stealth == 30
+    assert test.intelligence == 50
+    assert test.charisma == 30
+    assert test.agility == 50
+    assert test.endurance == 30
+
+
+def test_player_traverller_endurance():
+    test = Player(name=NameFactory('any'), major_type="Traveller", minor_type="Endurance")
+    assert test.strength == 30
+    assert test.stealth == 30
+    assert test.intelligence == 50
+    assert test.charisma == 30
+    assert test.agility == 30
+    assert test.endurance == 50
+
+
+def test_player_assassin_charismatic():
+    test = Player(name=NameFactory('any'), major_type="Assassin", minor_type="Charismatic")
+    assert test.strength == 30
+    assert test.stealth == 50
+    assert test.intelligence == 30
+    assert test.charisma == 50
+    assert test.agility == 30
+    assert test.endurance == 30
+
+
+def test_player_assassin_agile():
+    test = Player(name=NameFactory('any'), major_type="Assassin", minor_type="Agile")
+    assert test.strength == 30
+    assert test.stealth == 50
+    assert test.intelligence == 30
+    assert test.charisma == 30
+    assert test.agility == 50
+    assert test.endurance == 30
+
+
+def test_player_assassin_endurance():
+    test = Player(name=NameFactory('any'), major_type="Assassin", minor_type="Endurance")
+    assert test.strength == 30
+    assert test.stealth == 50
+    assert test.intelligence == 30
+    assert test.charisma == 30
+    assert test.agility == 30
+    assert test.endurance == 50

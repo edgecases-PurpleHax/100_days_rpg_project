@@ -5,8 +5,8 @@ from .factories import *
 
 class Game:
     def __init__(self):
-        self.player = Player(name=input("What is your name? \r\n"), strength=100, intelligence=100, stealth=100,
-                             charisma=100, health=100)
+        self.player_info = self.create_player()
+        self.player = Player(name=self.player_info[0],major_type=self.player_info[1], minor_type=self.player_info[2])
         self.armorer = Armorer(name=NameFactory('any').name)
         self.spellseller = SpellSeller(name=NameFactory('any').name)
         self.librarian = Librarian(name=NameFactory('any').name)
@@ -26,3 +26,10 @@ class Game:
         with open('missions.json') as f:
             missions = json.load(f)
             return missions[missionNumber]
+
+    def create_player(self):
+        name=input("What is your name? \r\n")
+        mapping = {"majortype": {"1": "Soldier", "2": "Traveller", "3":"Assassin"}, "minortype":{"1":"Charismatic", "2":"Agile", "3":"Endurance"}}
+        major_type = input("Would you like to be:\r\n1. Soldier\r\n2. Traveller\r\n3. Assassin")
+        minor_type = input("Would you like to be:\r\n1. Charismatic\r\n2. Agile\r\n3. Endurance")
+        return [name, mapping["majortype"][major_type], mapping["minortype"][minor_type]]
