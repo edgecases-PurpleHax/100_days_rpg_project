@@ -59,7 +59,12 @@ class Player(Character):
         return self.strength * (self.intelligence / 100)
 
     def avoid_attack(self):
-        return self.strength * (self.charisma / 100)
+        chance = self.strength * (self.charisma/100)
+        roll = random.random(1, 20)
+        if chance > roll:
+            return True
+        if chance <= roll:
+            return False
 
     def stealth_attack(self):
         return self.strength * (self.stealth / 100)
