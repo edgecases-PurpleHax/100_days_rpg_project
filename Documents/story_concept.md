@@ -16,8 +16,33 @@ _____________________________________
 ______________________________________________________________________
 # Player concept
 ## For v1
-* 1-3 Choices for major type
+* Major types: 3
+  * Something focused on strength
+    * Soldier
+      * Regular attacks have higher modifier
+      * Health increases on successful stealth attack
+      * Starting stats
+        * Intelligence: 30
+        * Strength: 50
+        * Stealth: 30
+  * Something focused on intelligence
+    * Traveller
+      * Gains knowledge of multiverses quicker
+      * Can use intelligence attacks with increased efficiency
+      * Starting stats
+        * Intelligence: 50
+        * Strength: 30
+        * Stealth: 35
+  * Something focused on stealth
+    * Assassin
+      * Stealth attacks have increased damage
+      * Studying at a library increases stealth attack modifier as well as intelligence
+      * Starting Stats
+        * Intelligence: 35
+        * Strength: 30
+        * Stealth: 50
 * 1 minor type per major type minimum
+  * Special will be affected by this
 * Inventory
   * Weapons
   * Currency
@@ -36,16 +61,14 @@ ______________________________________________________________________
   * Something related to special
 __________________________________
 # Era concept
-* Possibilities (WIP)
-  * Futuristic?
-  * Medieval?
-  * Maybe time jumping? 
+* Multiverse concept
+  * Multiple Multiverses
+  * Decisions made/fights won in 1 multiverse affect other multiverses
 * How does the player get around?
+  * Dependent on which multiverse and which course has been done
 * How does the player meet NPCs and Enemies?
-* This will define what type of healing and such
-  * Potions: Medieval
-  * Syringes, shots, etc Futuristic
-  * Mix of both for time jumping
+* Each multiverse will have a separate inventory and currency type
+  * Inventories will not be shared across multiverses
 __________________________________
 # Gameplay concept
 ## Missions
