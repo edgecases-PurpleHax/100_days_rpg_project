@@ -1,11 +1,51 @@
 {
+  "0": {
+    "Name": "Introduction",
+    "NumberofEnemies": 0,
+    "NumberofActions": 5,
+    "BossType": "None",
+    "StoryLine": {
+      "Action1": {
+        "Story": "This is test action 1. Would you like to go\r\n1. left \r\n2. right?\r\n",
+        "Decision": "",
+        "Mapping": {
+          "1":  "You went Left",
+          "2": "You went Right"
+        }
+      },
+      "Action2": {
+        "Story": "This is test action 2. Would you like to go\n1. left \n2. right?\n", "Decision": "","Mapping": {
+          "1":  "You went Left",
+          "2": "You went Right"}},
+      "Action3": {
+        "Story": "This is test action 3. Would you like to go\n1. left \n2. right?\n",
+        "Decision": "","Mapping": {
+          "1":  "You went Left",
+          "2": "You went Right"}},
+      "Action4": {
+        "Story": "This is test action 4. Would you like to go\n1. left \n2. right?\n",
+        "Decision": "","Mapping": {
+          "1":  "You went Left",
+          "2": "You went Right"}},
+      "Action5": {
+        "Story": "This is test action 5. Would you like to go\n1. left \n2. right?\n",
+        "Decision": "",
+        "Mapping": {
+          "1":  "You went Left",
+          "2": "You went Right"}
+    }
+  }},
   "1": {
     "Name": "Mission 1",
     "NumberofEnemies": 5,
     "NumberofActions": 3,
     "BossType": "Dragon",
     "StoryLine": {
-      "Action1": "This is the first action"
+      "Action1": {"Story": "", "Decision": ""},
+      "Action2": {"Story": "", "Decision": ""},
+      "Action3": {"Story": "", "Decision": ""},
+      "Action4": {"Story": "", "Decision": ""},
+      "Action5": {"Story": "", "Decision": ""}
     }
   },
   "2": {
@@ -14,7 +54,11 @@
     "NumberofActions": 3,
     "BossType": "",
     "StoryLine": {
-      "Action1": "This is the first action"
+      "Action1": {"Story": "", "Decision": ""},
+      "Action2": {"Story": "", "Decision": ""},
+      "Action3": {"Story": "", "Decision": ""},
+      "Action4": {"Story": "", "Decision": ""},
+      "Action5": {"Story": "", "Decision": ""}
     }
   },
   "3": {
@@ -23,7 +67,11 @@
     "NumberofActions": 3,
     "BossType": "",
     "StoryLine": {
-      "Action1": "This is the first action"
+      "Action1": {"Story": "", "Decision": ""},
+      "Action2": {"Story": "", "Decision": ""},
+      "Action3": {"Story": "", "Decision": ""},
+      "Action4": {"Story": "", "Decision": ""},
+      "Action5": {"Story": "", "Decision": ""}
     }
   },
   "4": {
@@ -32,7 +80,11 @@
     "NumberofActions": 3,
     "BossType": "",
     "StoryLine": {
-      "Action1": "This is the first action"
+      "Action1": {"Story": "", "Decision": ""},
+      "Action2": {"Story": "", "Decision": ""},
+      "Action3": {"Story": "", "Decision": ""},
+      "Action4": {"Story": "", "Decision": ""},
+      "Action5": {"Story": "", "Decision": ""}
     }
   },
   "5": {
@@ -41,7 +93,11 @@
     "NumberofActions": 3,
     "BossType": "",
     "StoryLine": {
-      "Action1": "This is the first action"
+      "Action1": {"Story": "", "Decision": ""},
+      "Action2": {"Story": "", "Decision": ""},
+      "Action3": {"Story": "", "Decision": ""},
+      "Action4": {"Story": "", "Decision": ""},
+      "Action5": {"Story": "", "Decision": ""}
     }
   }
 }
