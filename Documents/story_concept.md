@@ -32,7 +32,7 @@ ______________________________________________________________________
       * Starting stats
         * Intelligence: 50
         * Strength: 30
-        * Stealth: 35
+        * Stealth: 30
   * Something focused on stealth
     * Assassin
       * Stealth attacks have increased damage

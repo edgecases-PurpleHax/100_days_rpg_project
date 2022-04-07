@@ -36,11 +36,37 @@ class Character:
 
 
 class Player(Character):
-    def __init__(self, name, strength, health, intelligence, stealth, charisma):
-        super().__init__(name, strength, health)
-        self.stealth = stealth
-        self.intelligence = intelligence
-        self.charisma = charisma
+    def __init__(self, name, major_type, minor_type):
+        self.major_type = major_type
+        self.minor_type = minor_type
+        if self.major_type == "Soldier":
+            self.health = 100
+            self.strength = 50
+            self.intelligence = 30
+            self.stealth = 30
+        elif self.major_type == "Assassin":
+            self.health = 100
+            self.strength = 30
+            self.intelligence = 30
+            self.stealth = 50
+        elif self.major_type == "Traveller":
+            self.health = 100
+            self.strength = 30
+            self.intelligence = 50
+            self.stealth = 30
+        if self.minor_type == "Charismatic":
+            self.charisma = 50
+            self.agility = 30
+            self.endurance = 30
+        elif self.minor_type == "Agile":
+            self.charisma = 30
+            self.agility = 50
+            self.endurance = 30
+        elif self.minor_type == "Endurance":
+            self.charisma = 30
+            self.agility = 30
+            self.endurance = 50
+        super().__init__(name, self.strength, self.health)
 
     def study(self, intelligence_gain):
         if self.intelligence + intelligence_gain >= 100:
