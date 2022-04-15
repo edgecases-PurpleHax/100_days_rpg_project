@@ -6,7 +6,8 @@
     "BossType": "None",
     "StoryLine": {
       "Action1": {
-        "Story": "This is test action 1. Would you like to go\r\n1. left \r\n2. right?\r\n",
+        "Story": "Welcome to Dimension 1. We have been waiting for you. This dimension was created specifically for training you for your future shifts between dimensions and the enemies you will face. You are in an action now. To move from each action, you must make a selection. Would you like to go \r\n1. Left\r\n2. Right \r\n",
+
         "Decision": "",
         "Mapping": {
           "1":  "You went Left",
@@ -14,25 +15,25 @@
         }
       },
       "Action2": {
-        "Story": "This is test action 2. Would you like to go\n1. left \n2. right?\n", "Decision": "","Mapping": {
-          "1":  "You went Left",
-          "2": "You went Right"}},
+        "Story": "That was easy right? So there are three types of actions.\r\n1. Movement\r\n2. Attack\r\n3. Defend. What you just did was a movement action. \r\nNow, lets try a defense action. Would you like to\r\n1. Regular Defend\r\n2. Special Defend\r\n", "Decision": "","Mapping": {
+          "1":  "You used Regular Defend. This type of defense can be used any time. Special defend requires that your special be charged, but makes up for that in strength. \r\n",
+          "2": "You used Special Defend. This defense requires your special to be charged. Regular defend can be used any time, but is weaker.\r\n"}},
       "Action3": {
-        "Story": "This is test action 3. Would you like to go\n1. left \n2. right?\n",
+        "Story": "So, finally what you really came for right? Lets do an attack. Would you like to \r\n1. Regular Attack\r\n2. Special Attack\r\n",
         "Decision": "","Mapping": {
-          "1":  "You went Left",
-          "2": "You went Right"}},
+          "1":  "You used Regular attack. This type of attack can be used any time. Special attack requires that your special be charged, but makes up for that in strength. \n",
+          "2": "You used Special attack. This attack requires your special to be charged. Regular attack can be used any time, but is weaker.\n"}},
       "Action4": {
-        "Story": "This is test action 4. Would you like to go\n1. left \n2. right?\n",
+        "Story": "So now that you understand the basics, it is time to leave this dimension. One last thing, pay close attention to the action descriptions. They may give clues to what choice you should make for each action, right?\r\n1. Go left\r\n2. Go right\n",
         "Decision": "","Mapping": {
-          "1":  "You went Left",
-          "2": "You went Right"}},
+          "1":  "Apparently, my clue wasn't clear enough. You need to go right. Now you must start over.\r\n",
+          "2": "Well, you either got lucky, or followed the clue. The final action in this dimension will determine that I suppose\r\n"}},
       "Action5": {
-        "Story": "This is test action 5. Would you like to go\n1. left \n2. right?\n",
+        "Story": "There was once a man that fell in a woman. When the times were good, everything felt right but there was still a feeling that something was missing. When she left, he thought he might die, but finally he realized he would be ok and move on. \r\n1. Left\r\n2. Right\r\n",
         "Decision": "",
         "Mapping": {
-          "1":  "You went Left",
-          "2": "You went Right"}
+          "1":  "Well, you chose the right answer twice, so you either should play the lottery or you figured out how our clues work. Congratulations, but remember, the clues will get harder and sometimes not even exist. You have many dimensions to seek, enjoy yourself, but be careful. \r\n1. Continue \r\n2. Retrain\r\n",
+          "2": "You need to pay closer attention. Retrain. "}
     }
   }},
   "1": {
