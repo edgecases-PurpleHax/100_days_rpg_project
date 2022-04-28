@@ -30,6 +30,20 @@ class Game:
     def create_player(self):
         name=input("What is your name? \r\n")
         mapping = {"majortype": {"1": "Soldier", "2": "Traveller", "3":"Assassin"}, "minortype":{"1":"Charismatic", "2":"Agile", "3":"Endurance"}}
-        major_type = input("Would you like to be:\r\n1. Soldier\r\n2. Traveller\r\n3. Assassin")
-        minor_type = input("Would you like to be:\r\n1. Charismatic\r\n2. Agile\r\n3. Endurance")
+        major_type = input("Would you like to be:\r\n1. Soldier\r\n2. Traveller\r\n3. Assassin\r\n")
+        minor_type = input("Would you like to be:\r\n1. Charismatic\r\n2. Agile\r\n3. Endurance\r\n")
         return [name, mapping["majortype"][major_type], mapping["minortype"][minor_type]]
+
+    def mission_loops(self, action_number, mission_list):
+        cont_game = True
+        while cont_game:
+            mission_list['StoryLine'][action_number]['Decision'] = str(input(mission_list['StoryLine'][action_number]['Story']))
+            if mission_list['StoryLine'][action_number]['Decision'] != "1" and mission_list['StoryLine'][action_number][
+                'Decision'] != "2":
+                return "Please enter 1 or 2"
+            elif mission_list['StoryLine'][action_number]['Decision'] == "1":
+                return mission_list['StoryLine'][action_number]['Mapping'][mission_list['StoryLine'][action_number]['Decision']]
+                cont_game = False
+            elif mission_list['StoryLine'][action_number]['Decision'] == "2":
+                return mission_list['StoryLine'][action_number]['Mapping'][mission_list['StoryLine'][action_number]['Decision']]
+                cont_game = False
